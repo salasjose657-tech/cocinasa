@@ -1,11 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Indica que este documento es HTML5 -->
+<html lang="es"> <!-- Establece el idioma del contenido como español -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cocinasa</title>
+    <meta charset="UTF-8"> <!-- Permite usar acentos, ñ y caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea adaptable en celulares -->
+    <title>Cocinasa</title> <!-- Título que aparece en la pestaña del navegador -->
+
+    <!-- Aquí comienza el CSS (diseño visual de la página) -->
+    <style>
+        /* Estilo general del cuerpo de la página */
+        body {
+            margin: 0; /* Elimina márgenes por defecto del navegador */
+            font-family: Arial, sans-serif; /* Define la fuente de texto */
+            display: flex; /* Activa el modelo flexible para dividir la pantalla en columnas */
+            height: 100vh; /* Hace que ocupe el 100% de la altura visible */
+        }
+
+        /* Estilo para la parte izquierda */
+        .izquierda {
+            flex: 1; /* Ocupa la mitad del ancho total */
+            background-color: #f4f4f4; /* Fondo gris claro */
+            padding: 40px; /* Espacio interior alrededor del texto */
+            display: flex; /* Usa flexbox dentro del contenedor */
+            flex-direction: column; /* Organiza el contenido en columna */
+            justify-content: center; /* Centra verticalmente el contenido */
+        }
+
+        /* Estilo para la parte derecha (donde va la foto) */
+        .derecha {
+            flex: 1; /* Ocupa la otra mitad del ancho */
+            display: flex; /* También usa flexbox */
+            justify-content: center; /* Centra horizontalmente la imagen */
+            align-items: center; /* Centra verticalmente la imagen */
+            background-color: #fff; /* Fondo blanco */
+        }
+
+        /* Estilo para la imagen */
+        img {
+            width: 300px; /* Ancho de la imagen */
+            height: 300px; /* Altura de la imagen */
+            border-radius: 50%; /* Hace la imagen circular */
+            object-fit: cover; /* Ajusta la imagen sin deformarla */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Agrega una sombra suave */
+        }
+
+        /* Estilo para los títulos (h1) */
+        h1 {
+            color: #333; /* Color gris oscuro */
+        }
+
+        /* Estilo para los párrafos */
+        p {
+            color: #555; /* Color gris medio */
+            line-height: 1.6; /* Espaciado entre líneas para mejor lectura */
+        }
+    </style>
 </head>
-<body>
-    <h1>HOLA MUNDO</h1>
+
+<body> <!-- Cuerpo del documento, donde está el contenido visible -->
+
+    <!-- Sección izquierda: información personal -->
+    <div class="izquierda">
+        <h1>¡Hola! Soy José Salas</h1> <!-- Título principal -->
+        <p>
+            Bienvenido a mi página web. Me apasiona la cocina y compartir recetas sencillas
+            que todos puedan disfrutar. Aquí encontrarás platos deliciosos, consejos y mucho más.
+        </p>
+    </div>
+
+    <!-- Sección derecha: imagen personal -->
+    <div class="derecha">
+        <img src="foto.jpg" alt="Foto de José Salas"> <!-- Imagen (debes tener un archivo llamado 'foto.jpg' en la misma carpeta) -->
+    </div>
+
 </body>
 </html>
